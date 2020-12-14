@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>color picker</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+
+      li {
+        display: inline-block;
+      }
+
+      input[type="radio"] {
+        height: 0;
+        opacity: 0;
+        width: 0;
+        position: absolute;
+      }
+
+      input[type="radio"] + span {
+        border: 2px solid grey;
+        border-radius: 50%;
+        display: inline-block;
+        height: 32px;
+        width: 32px;
+      }
+
+      input[type="radio"]:checked + span {
+        border-color: black;
+      }
+      
+      input[type="radio"]:focus + span {
+        border-color: red;
+      }
+
+      .red {
+        background: tomato;
+      }
+
+      .green {
+        background: green;
+      }
+      .yellow {
+        background: yellow;
+      }
+      .blue {
+        background: blue;
+      }
+
+      .black-and-white {
+        background-image: linear-gradient(
+          135deg,
+          #fff 0%,
+          #fff 50%,
+          #0a0e0a 51%,
+          #0a0809 100%
+        );
+      }
+
+      .colorful {
+        background: linear-gradient(45deg, yellow 0%, rgba(233, 7, 184, 0) 70%),
+          linear-gradient(135deg, fuchsia 10%, rgba(230, 10, 32, 0) 80%),
+          linear-gradient(225deg, aqua 10%, rgba(118, 203, 6, 0) 80%),
+          linear-gradient(315deg, limegreen 100%, rgba(88, 9, 215, 0) 70%);
+      }
+
+      a:hover {
+        background: tomato;
+      }
+    </style>
+  </head>
+  <body>
+    <ul>
+      <li>
+        <label
+          ><input name="color" type="radio" /><span class="color red"></span
+        ></label>
+      </li>
+      <li>
+        <label
+          ><input name="color" type="radio" /><span class="color yellow"></span
+        ></label>
+      </li>
+      <li>
+        <label
+          ><input name="color" type="radio" /><span class="color green"></span
+        ></label>
+      </li>
+      <li>
+        <label
+          ><input name="color" type="radio" /><span class="color blue"></span
+        ></label>
+      </li>
+      <li>
+        <label
+          ><input name="color" type="radio" /><span
+            class="color black-and-white"
+          ></span
+        ></label>
+      </li>
+      <li>
+        <label
+          ><input name="color" type="radio" /><span
+            class="color colorful"
+          ></span
+        ></label>
+      </li>
+    </ul>
+
+    <a href="#">link</a>
+    <textarea placeholder="bla"></textarea>
+  </body>
+</html>
